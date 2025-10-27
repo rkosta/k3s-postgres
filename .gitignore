@@ -1,0 +1,48 @@
+# Temporary directory containing unsealed secrets
+# NEVER commit unsealed secrets to Git!
+tmp/
+
+# Any temporary secret files (unsealed)
+*-secret-unsealed.yaml
+postgres-secret-temp.yaml
+
+# Backup files
+*.sql
+*.dump
+*.backup
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment files (if you create any)
+.env
+.env.local
+
+# Log files
+*.log
+
+# Kubernetes local testing files
+kubeconfig
+*.kubeconfig
+
+# Notes
+notes.txt
+notes.md
+TODO.txt
+
+##############################################
+# Files SAFE to commit (already in repo):
+# - 01-namespace.yaml
+# - 02-persistentvolume.yaml
+# - 03-persistentvolumeclaim.yaml
+# - 04-secret.yaml (SealedSecret - encrypted, safe!)
+# - 05-configmap.yaml
+# - 06-statefulset.yaml
+# - 07-service.yaml
+# - README.md
+##############################################
